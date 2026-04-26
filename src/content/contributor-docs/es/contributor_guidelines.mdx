@@ -19,37 +19,37 @@ Este es un documento relativamente largo e integral, pero trataremos de indicar 
 # Tabla de Contenidos
 
 * [Todo acerca de los 'Issues' o problemas](#todo-acerca-de-los-issues-o-problemas)
-  * [¿Qué son los 'Issues' en GitHub?](#qué-son-los-issues-en-github/)
+  * [¿Qué son los 'Issues' en GitHub?](#qué-son-los-issues-en-github)
   * [Plantillas para reportar 'Issues'](#plantillas-para-reportar-issues)
     * [Reportar un error](#reportar-un-error)
     * [Sugerir una mejora a una funcionalidad existente](#sugerir-una-mejora-a-una-funcionalidad-existente)
     * [Sugerir una funcionalidad nueva](#sugerir-una-funcionalidad-nueva)
-    * [Abrir una discusión ](#abrir-una-discusión/)
-* [Trabajando en la base de código de p5.js](#trabajando-en-la-base-de-código-de-p5js/)
-  * [Inicio Rápido para Desarrolladores](#inicio-rápido-para-desarrolladores/)
-  * [Utilizando la funcionalidad de edición de Github](#utilizando-la-funcionalidad-de-edición-de-github/)
+    * [Abrir una discusión ](#abrir-una-discusión)
+* [Trabajando en la base de código de p5.js](#trabajando-en-la-base-de-código-de-p5js)
+  * [Inicio Rápido para Desarrolladores](#inicio-rápido-para-desarrolladores)
+  * [Utilizando la funcionalidad de edición de Github](#utilizando-la-funcionalidad-de-edición-de-github)
   * [Haciendo un fork de p5.js y trabajando desde tu fork](#haciendo-un-fork-de-p5js-y-trabajando-desde-tu-fork)
     * [Utilizando Github Desktop](#utilizando-github-desktop)
-    * [Utilizando la interfaz de línea de comandos de Git](#utilizando-la-interfaz-de-línea-de-comandos-de-git/)
-  * [Desglose de la base de código ](#desglose-de-la-base-de-código/)
-  * [Configuración de compilación](#configuración-de-compilación/)
+    * [Utilizando la interfaz de línea de comandos de Git](#utilizando-la-interfaz-de-línea-de-comandos-de-git)
+  * [Desglose de la base de código ](#desglose-de-la-base-de-código)
+  * [Configuración de compilación](#configuración-de-compilación)
   * [Flujo de trabajo de Git](#flujo-de-trabajo-de-git)
-    * [Código fuente](#código-fuente/)
+    * [Código fuente](#código-fuente)
     * [Pruebas unitarias](#pruebas-unitarias)
-    * [Documentación en línea](#documentación-en-línea/)
+    * [Documentación en línea](#documentación-en-línea)
     * [Internacionalización](https://github.com/processing/p5.js/blob/main/contributor_docs/contributor_guidelines.md#internationalization)
     * [Accesibilidad](#accesibilidad)
-  * [Estándares de código](#estándares-de-código/)
-  * [Principios de Diseño de Software](#principios-de-diseño-de-software/)
+  * [Estándares de código](#estándares-de-código)
+  * [Principios de Diseño de Software](#principios-de-diseño-de-software)
 * [Pull Requests](#pull-requests)
-  * [Creación de un Pull Request](#creación-de-un-pull-request/)
-    * [Información sobre el Pull Request](#información-sobre-el-pull-request/)
+  * [Creación de un Pull Request](#creación-de-un-pull-request)
+    * [Información sobre el Pull Request](#información-sobre-el-pull-request)
     * [Titulo](#titulo)
     * [Resuelve](#resuelve)
     * [Cambios](#cambios)
     * [Captura de pantalla de los cambios](#captura-de-pantalla-de-los-cambios)
-    * [Lista de verificación del Pull Request](#lista-de-verificación-del-pull-request/)
-    * [Rebase y resolución de conflictos](#rebase-y-resolución-de-conflictos/)
+    * [Lista de verificación del Pull Request](#lista-de-verificación-del-pull-request)
+    * [Rebase y resolución de conflictos](#rebase-y-resolución-de-conflictos)
   * [Discutir y Corregir](#discutir-y-corregir)
 
 ***
@@ -80,12 +80,12 @@ Para registrar un <em>Issue</em> por primera vez dentro del repositorio de p5.js
 
 ### ["Reportar un Error"](https://github.com/processing/p5.js/issues/new?assignees=\&labels=Bug\&projects=\&template=found-a-bug.yml)
 
-Cuando encuentres un comportamiento incorrecto en p5.js, o algo que no se esté comportando como se ha descrito en la documentación, \[usa esta plantilla]\(../ [https://github.com/processing/p5.js/issues/new?assignees=\&labels=Bug\&projects=\&template=found-a-bug.yml](https://github.com/processing/p5.js/issues/new?assignees=\&labels=Bug\&projects=\&template=found-a-bug.yml)). Por favor, ten en cuenta que si estás  tratado de corregir el código de tu <em>sketch</em> (boceto), y crees que el problema tal vez se encuentra en tu código, primero consulta en el \[foro de discusiones]\(../ [https://discourse.processing.org/](https://discourse.processing.org/)) antes de reportar un error.
+Cuando encuentres un comportamiento incorrecto en p5.js, o algo que no se esté comportando como se ha descrito en la documentación, [usa esta plantilla](https://github.com/processing/p5.js/issues/new?assignees=\&labels=Bug\&projects=\&template=found-a-bug.yml). Por favor, ten en cuenta que si estás  tratado de corregir el código de tu <em>sketch</em> (boceto), y crees que el problema tal vez se encuentra en tu código, primero consulta en el [foro de discusiones](https://discourse.processing.org/) antes de reportar un error.
 
 Esta plantilla provee campos que debes llenar con la siguiente información relevante:
 
-1. **¿Cuál es la subárea más adecuada de p5.js?:** esto añadirá automáticamente las \[etiquetas]\(../ [https://github.com/processing/p5.js/blob/main/contributor\_docs/issue\_labels/](https://github.com/processing/p5.js/blob/main/contributor_docs/issue_labels/)) relevantes a tu <em>Issue</em>, lo que nos ayudará a identificar y responder adecuadamente.
-2. **Versión de p5.js:** Puedes verificar la versión de p5.js dentro de la etiqueta `<script>`  que se encuentra en la primera línea del archivo p5.js/p5.min.js. Opcionalmente, en el \[editor de p5.js]\(../ [https://editor.p5js.org/](https://editor.p5js.org/)), puedes dar clic al botón de ‘Ayuda’ que se encuentra en la parte superior. Luego da clic en ‘Acerca de’ y aquí podrás encontrar la versión de p5.js. Esta lucirá algo como `1.9.1`(tres números separados por un punto).
+1. **¿Cuál es la subárea más adecuada de p5.js?:** esto añadirá automáticamente las [etiquetas](https://github.com/processing/p5.js/blob/main/contributor_docs/archive/issue_labels.md) relevantes a tu <em>Issue</em>, lo que nos ayudará a identificar y responder adecuadamente.
+2. **Versión de p5.js:** Puedes verificar la versión de p5.js dentro de la etiqueta `<script>`  que se encuentra en la primera línea del archivo p5.js/p5.min.js. Opcionalmente, en el [https://editor.p5js.org/](https://editor.p5js.org/), puedes dar clic al botón de ‘Ayuda’ que se encuentra en la parte superior. Luego da clic en ‘Acerca de’ y aquí podrás encontrar la versión de p5.js. Esta lucirá algo como `1.9.1`(tres números separados por un punto).
 3. **Navegadores web y versión de los mismos:** esta sección nos ayuda a identificar diversos comportamientos entre los diferentes navegadores web. Para encontrar la versión de tu navegador, sigue las instrucciones proporcionadas en la siguiente tabla según el navegador que estés utilizando.
 
 <table>
@@ -132,7 +132,7 @@ Si deseas contribuir a la solución del error que has reportado, indícalo en la
 
 **No debes registrar un <em>Pull Request</em> ni comenzar a trabajar en cambios de código sin antes haber registrado un <em>Issue</em> correspondiente, o antes de que dicho <em>Issue</em> haya sido aprobado para su implementación**. Esto se debe a que la solución propuesta podría no ser aceptada, podría requerir un enfoque completamente diferente o es posible que el problema real esté en otro lugar. Cualquier <em>Pull Request</em> que se registre antes de que se haya aprobado un <em>Issue</em> correspondiente, será cerrado hasta que el <em>Issue</em> haya sido aprobado previamente.
 
-Para que un reporte de error sea aceptado para su corrección, este debe ser aprobado por al menos un \[Supervisor de área o Responsable de mantenimiento]\(../ [https://github.com/processing/p5.js#stewards](https://github.com/processing/p5.js#stewards)), antes de que se pueda comenzar a trabajar en el <em>Pull Request</em>.
+Para que un reporte de error sea aceptado para su corrección, este debe ser aprobado por al menos un [Supervisor de área o Responsable de mantenimiento](https://github.com/processing/p5.js#stewards), antes de que se pueda comenzar a trabajar en el <em>Pull Request</em>.
 
 ### [Sugerir una mejora a una funcionalidad existente](https://github.com/processing/p5.js/issues/new?assignees=\&labels=Enhancement\&projects=\&template=existing-feature-enhancement.yml)
 
@@ -140,13 +140,13 @@ Esta plantilla debe ser usada si deseas proponer cambios o sugerir mejoras a una
 
 Esta plantilla provee campos que debes llenar con la siguiente información relevante:
 
-1. **Mejorar la accesibilidad:**  Este es un campo requerido en el cual debes explicar cómo la adición de la mejora o cambio a la funcionalidad existente, ayudará a \[mejorar la accesibilidad]\(../ [https://github.com/processing/p5.js/blob/main/contributor\_docs/access/](https://github.com/processing/p5.js/blob/main/contributor_docs/access/)) para las personas que han sido históricamente marginadas en las disciplinas de las artes y las tecnologías. **Es importante destacar que ninguna propuesta será aceptada sin esta declaración**. No obstante, si tienes dudas al respecto, puedes incluir "No estoy seguro" en este campo y comenzar una conversación con la comunidad para comprender cómo tu propuesta puede abordar eficazmente el tema de mejorar la accesibilidad en p5.js.
+1. **Mejorar la accesibilidad:**  Este es un campo requerido en el cual debes explicar cómo la adición de la mejora o cambio a la funcionalidad existente, ayudará a [mejorar la accesibilidad](https://github.com/processing/p5.js/blob/main/contributor_docs/access.md) para las personas que han sido históricamente marginadas en las disciplinas de las artes y las tecnologías. **Es importante destacar que ninguna propuesta será aceptada sin esta declaración**. No obstante, si tienes dudas al respecto, puedes incluir "No estoy seguro" en este campo y comenzar una conversación con la comunidad para comprender cómo tu propuesta puede abordar eficazmente el tema de mejorar la accesibilidad en p5.js.
 
-2. **¿Cuál es la subárea más adecuada de p5.js?:** Esto añadirá automáticamente las \[etiquetas]\(../ [https://github.com/processing/p5.js/blob/main/contributor\_docs/issue\_labels/](https://github.com/processing/p5.js/blob/main/contributor_docs/issue_labels/)) relevantes a tu <em>Issue</em>, lo que nos ayudará a identificar y responder adecuadamente.
+2. **¿Cuál es la subárea más adecuada de p5.js?:** Esto añadirá automáticamente las [etiquetas](https://github.com/processing/p5.js/blob/main/contributor_docs/archive/issue_labels.md) relevantes a tu <em>Issue</em>, lo que nos ayudará a identificar y responder adecuadamente.
 
 3. **Detalles sobre la de mejora de una funcionalidad:** Aquí debes describir tu propuesta para la mejora de una funcionalidad. Una buena propuesta generalmente incluye un caso de uso específico: qué, cuándo, cómo y por qué esta funcionalidad es necesaria.
 
-Para que las propuestas de mejora a una funcionalidad sean aceptadas, estas deben ser aprobadas por al menos un \[Supervisor de área o Responsable de mantenimiento]\(../ [https://github.com/processing/p5.js#stewards](https://github.com/processing/p5.js#stewards)), antes de que se comience a trabajar en el <em>Pull Request</em>.
+Para que las propuestas de mejora a una funcionalidad sean aceptadas, estas deben ser aprobadas por al menos un [Supervisor de área o Responsable de mantenimiento](https://github.com/processing/p5.js#stewards), antes de que se comience a trabajar en el <em>Pull Request</em>.
 
 **No debes registrar un <em>Pull Request</em> ni comenzar a trabajar en cambios de código sin antes haber registrado un <em>Issue</em> correspondiente, o antes de que dicho <em>Issue</em> haya sido aprobado para su implementación**. Esto se debe a que no hay garantía de que la propuesta será aceptada. Cualquier <em>Pull Request</em> que se registre antes de que se haya aprobado un <em>Issue</em> correspondiente, será cerrado hasta que el <em>Issue</em> haya sido aprobado previamente.
 
@@ -156,21 +156,21 @@ Esta plantilla debe ser usada si deseas proponer la adición de una nueva funcio
 
 Esta plantilla provee campos que debes llenar con la siguiente información relevante:
 
-1. **Mejorar la accesibilidad:**  Este es un campo requerido en el cual debes explicar cómo la adición de la mejora o cambio a la funcionalidad existente, ayudará a \[mejorar la accesibilidad]\(../ [https://github.com/processing/p5.js/blob/main/contributor\_docs/access/](https://github.com/processing/p5.js/blob/main/contributor_docs/access/)) para las personas que han sido históricamente marginadas en las disciplinas de las artes y las tecnologías. **Es importante destacar que ninguna propuesta será aceptada sin esta declaración**. No obstante, si tienes dudas al respecto, puedes incluir "No estoy seguro" en este campo y comenzar una conversación con la comunidad para comprender cómo tu propuesta puede abordar eficazmente el tema de mejorar la accesibilidad en p5.js.
+1. **Mejorar la accesibilidad:**  Este es un campo requerido en el cual debes explicar cómo la adición de la mejora o cambio a la funcionalidad existente, ayudará a [mejorar la accesibilidad](https://github.com/processing/p5.js/blob/main/contributor_docs/access.md) para las personas que han sido históricamente marginadas en las disciplinas de las artes y las tecnologías. **Es importante destacar que ninguna propuesta será aceptada sin esta declaración**. No obstante, si tienes dudas al respecto, puedes incluir "No estoy seguro" en este campo y comenzar una conversación con la comunidad para comprender cómo tu propuesta puede abordar eficazmente el tema de mejorar la accesibilidad en p5.js.
 
-2. **¿Cuál es la subárea más adecuada de p5.js?:** Esto añadirá automáticamente las \[etiquetas]\(../ [https://github.com/processing/p5.js/blob/main/contributor\_docs/issue\_labels/](https://github.com/processing/p5.js/blob/main/contributor_docs/issue_labels/)) relevantes a tu <em>Issue</em>, lo que nos ayudará a identificar y responder adecuadamente.
+2. **¿Cuál es la subárea más adecuada de p5.js?:** Esto añadirá automáticamente las [etiquetas](https://github.com/processing/p5.js/blob/main/contributor_docs/archive/issue_labels.md) relevantes a tu <em>Issue</em>, lo que nos ayudará a identificar y responder adecuadamente.
 
 3. **Detalles de la nueva funcionalidad:** Aquí debes describir tu propuesta para proponer la adición de una nueva funcionalidad. Una buena propuesta generalmente incluye un caso de uso específico: qué, cuándo, cómo y por qué esta funcionalidad es necesaria.
 
-Para que una nueva funcionalidad sea aceptada, esta debe ser aprobada por al menos 2 \[Supervisores de área o Responsables de mantenimiento]\(../ [https://github.com/processing/p5.js#stewards](https://github.com/processing/p5.js#stewards)), antes de que se comience a trabajar en el <em>Pull Request</em>.
+Para que una nueva funcionalidad sea aceptada, esta debe ser aprobada por al menos 2 [Supervisor de área o Responsable de mantenimiento](https://github.com/processing/p5.js#stewards), antes de que se comience a trabajar en el <em>Pull Request</em>.
 
 **No debes registrar un <em>Pull Request</em> ni comenzar a trabajar en cambios de código sin antes haber registrado un <em>Issue</em> correspondiente, o antes de que dicho <em>Issue</em> haya sido aprobado para su implementación**. Esto se debe a que no hay garantía de que la propuesta será aceptada. Cualquier <em>Pull Request</em> que se registre antes de que se haya aprobado un <em>Issue</em> correspondiente, será cerrado hasta que el <em>Issue</em> haya sido aprobado previamente.
 
 ### [Abrir una discusión](https://github.com/processing/p5.js/issues/new?assignees=\&labels=Discussion\&projects=\&template=discussion.yml)
 
-Esta plantilla se utiliza cuando el <em>Issue</em> que estas registrando no encaja en ninguna de las plantillas anteriores. Un <em>Issue</em> que no corresponda a ninguna de las plantillas proporcionadas es relativamente inusual. Por ejemplo, si hay una discusión sobre si se debe adoptar una funcionalidad de una API web específica en p5.js, esta debería registrarse como ['Sugerir una funcionalidad nueva](#sugerir-una-funcionalidad-nueva). En otro ejemplo, una discusión acerca de añadir nuevos modos de colores a las funciones de color de p5.js, debe ser registrada como \[“Sugerir una mejora a una funcionalidad existente”]\(../ #sugerir-una-mejora-a-una-funcionalidad-existente). Finalmente, si tienes un anuncio sobre un evento local de programación que estás  organizando, este debería ser publicado en el foro e inclusive podrías contactar a la Fundación de Processing si estás buscando apoyo, publicidad, etc.
+Esta plantilla se utiliza cuando el <em>Issue</em> que estas registrando no encaja en ninguna de las plantillas anteriores. Un <em>Issue</em> que no corresponda a ninguna de las plantillas proporcionadas es relativamente inusual. Por ejemplo, si hay una discusión sobre si se debe adoptar una funcionalidad de una API web específica en p5.js, esta debería registrarse como ['Sugerir una funcionalidad nueva](#sugerir-una-funcionalidad-nueva). En otro ejemplo, una discusión acerca de añadir nuevos modos de colores a las funciones de color de p5.js, debe ser registrada como [“Sugerir una mejora a una funcionalidad existente”](#sugerir-una-mejora-a-una-funcionalidad-existente). Finalmente, si tienes un anuncio sobre un evento local de programación que estás  organizando, este debería ser publicado en el foro e inclusive podrías contactar a la Fundación de Processing si estás buscando apoyo, publicidad, etc.
 
-Al abrir una discusión, puedes utilizar el panel de “Etiquetas”, que encontraras al costado derecho, para agregar etiquetas relevantes y así dirigir tu ‘Issue’ al área correspondiente. La plantilla en sí, consiste en un campo abierto que te permite comenzar una discusión. Puedes encontrar \[aquí]\(../ [https://github.com/processing/p5.js/issues/6517/](https://github.com/processing/p5.js/issues/6517/)) un ejemplo de una discusión.
+Al abrir una discusión, puedes utilizar el panel de “Etiquetas”, que encontraras al costado derecho, para agregar etiquetas relevantes y así dirigir tu ‘Issue’ al área correspondiente. La plantilla en sí, consiste en un campo abierto que te permite comenzar una discusión. Puedes encontrar [aquí](https://github.com/processing/p5.js/issues/6517/) un ejemplo de una discusión.
 
 [**⬆ Volver arriba.**](#instrucciones-para-colaboradores)
 
@@ -254,7 +254,7 @@ Trabajar desde el <em>fork</em>  que has creado del repositorio de p5.js es nece
 
 GitHub Desktop es un programa que te permite trabajar mediante una interfaz de usuario gráfica en lugar de escribir comandos en la terminal. Es una buena opción si eres nuevo en git, y siempre puedes alternar entre Github Desktop y la terminal a tu conveniencia.
 
-Primero \[descarga e instala GitHub Desktop]\(../ [https://desktop.github.com/](https://desktop.github.com/)). Una vez instalado, abre la aplicación. Esta te pedirá que inicies sesión con tu cuenta de GitHub. Una vez hayas iniciado sesión, GitHub Desktop hará una lista de tus proyectos, incluyendo tu <em>fork</em> de p5.js. Selecciona tu <em>fork</em>, el cual tendrá el nombre de `tuUsuario/p5.js`, y luego haz clic en el botón azul que dice ‘Clone’ (clonar). Luego, se te van a preguntar algunos detalles acerca de donde ubicar tu proyecto. Tienes la opción de cambiar la ubicación, o continuar con la configuración predefinida.
+Primero [descarga e instala GitHub Desktop](https://desktop.github.com/). Una vez instalado, abre la aplicación. Esta te pedirá que inicies sesión con tu cuenta de GitHub. Una vez hayas iniciado sesión, GitHub Desktop hará una lista de tus proyectos, incluyendo tu <em>fork</em> de p5.js. Selecciona tu <em>fork</em>, el cual tendrá el nombre de `tuUsuario/p5.js`, y luego haz clic en el botón azul que dice ‘Clone’ (clonar). Luego, se te van a preguntar algunos detalles acerca de donde ubicar tu proyecto. Tienes la opción de cambiar la ubicación, o continuar con la configuración predefinida.
 
 ![The GitHub Desktop user interface after signing in. On the right half of the screen, it lists your projects, and a Clone button in the bottom right.](src/content/contributor-docs/images/github-desktop-init.png)
 
